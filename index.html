@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Manager</h1>
+      <div class="form">
+        <input type="text" id="title" placeholder="Task Title" />
+        <select id="priority">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <input type="date" id="date" /> 
+        <button id="addBtn">Add Task</button>
+      </div>
+      <div class="search">
+        <input type="text" id="search" placeholder="Search Task" />
+      </div>
+      <div class="filters">
+        <button class="filter" data-filter="all">All</button>
+        <button class="filter" data-filter="completed">Completed</button>
+        <button class="filter" data-filter="pending">Pending</button>
+      </div>
+      <div class="counter">
+        <p>Total : <span id="total">0</span></p>
+        <p>Completed : <span id="completed">0</span></p>
+        <p>Pending : <span id="pending">0</span></p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Priority</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tasks"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
